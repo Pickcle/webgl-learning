@@ -1,0 +1,23 @@
+{
+  "name": "webgl-learning",
+  "version": "1.0.0",
+  "description": "learn webgl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pickcle/webgl-learning.git"
+  },
+  "keywords": [
+    "webgl",
+    "canvas"
+  ],
+  "author": "Pickcle Xiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pickcle/webgl-learning/issues"
+  },
+  "homepage": "https://github.com/Pickcle/webgl-learning#readme"
+}

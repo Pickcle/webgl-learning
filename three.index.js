@@ -1,13 +1,13 @@
 window.onload = function () {
   var scene = new THREE.Scene()
-  var aspect = window.innerWidth / window.innerHeight
-  var camera = new THREE.PerspectiveCamera(60, aspect, 1, 2000)
+  var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000)
   var renderer = new THREE.WebGLRenderer()
   renderer.setSize(window.innerWidth, window.innerHeight)
   document.body.appendChild(renderer.domElement)
 
   var geometry = new THREE.BoxGeometry(1, 1, 1)
-  var material = new THREE.MeshNormalMaterial()
+  var sphere = new THREE.SphereGeometry(5, 2, 1.5)
+  var material = new THREE.MeshPhongMaterial()
   // var cube = new THREE.Mesh(geometry, material)
   // scene.add(cube)
   camera.position.z = 10
@@ -24,12 +24,12 @@ window.onload = function () {
   }
 
   var mesh1 = new THREE.Mesh(geometry, material)
-  // var mesh2 = new THREE.Mesh(geometry, material)
+  var mesh2 = new THREE.Mesh(sphere, material)
   var group = new THREE.Group();
   scene.add( group );
 
-  group.add( mesh1 );
-  mesh1.scale.set(2,2,2)
+  // group.add( mesh1 );
+  group.add( mesh2 );
 
   render()
 }

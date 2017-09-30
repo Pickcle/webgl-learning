@@ -59,7 +59,7 @@ function main() {
   gl.enableVertexAttribArray(aloc);
   // 至此将gl.ARRAY_BUFFER中的数据分配给了着色器中的attribute变量a_Position
 
-  var carray = new Float32Array([1,0,0,0,1,0,0,0,1]);
+  var carray = new Float32Array([1,1,0,0,1,1,1,0,1]);
   var cbuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, cbuffer);
   gl.bufferData(gl.ARRAY_BUFFER, carray, gl.STATIC_DRAW);
